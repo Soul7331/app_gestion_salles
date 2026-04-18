@@ -1,16 +1,10 @@
-# This is a sample Python script.
+from Data.dao_salle import DataSalle
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+dao = DataSalle()
 
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+try:
+    connexion = dao.get_connection()
+    print("Connexion à la base de données réussie")
+    connexion.close()
+except Exception as e:
+    print("Erreur de connexion :", e)
