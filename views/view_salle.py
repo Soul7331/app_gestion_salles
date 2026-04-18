@@ -13,7 +13,7 @@ class ViewSalle(ctk.CTk):
 
         self.service_salle = ServiceSalle()
 
-        # Cadre Informations Salle
+
         self.cadreInfo = ctk.CTkFrame(self, corner_radius=10)
         self.cadreInfo.pack(pady=10, padx=10, fill="x")
 
@@ -37,7 +37,7 @@ class ViewSalle(ctk.CTk):
         self.entryCapacite = ctk.CTkEntry(self.cadreInfo, width=200)
         self.entryCapacite.grid(row=3, column=1, padx=10, pady=10)
 
-        # Cadre Actions
+
         self.cadreActions = ctk.CTkFrame(self, corner_radius=10)
         self.cadreActions.pack(pady=10, padx=10, fill="x")
 
